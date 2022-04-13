@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Penny For Your Thoughts Diary Card App</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+  </head>
+  <body>
+    <div class="flex-container">
+        <button type="button" id="new" class="buttons">New</button>
+        <div id="output"></div>
+        <form class="form" id="form" action="action_page.php" method="POST">
+      <div>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="prompt">Prompting Event: </label> <br />
+
+        <select name="prompt" id="prompt" class="select">
+            <option value="restriction" selected="selected">Restriction</option>
+            <option value="appeasing">Appeasing ED</option>
+            <option value="intrusive">Intrusive Thoughts</option>
+            <option value="physical">Physical Symptoms</option>
+            <option value="other">Other</option>
+        </select>
+        <div> <br />
+            <label for="decription">Description of Event: </label> <br>
+            <textarea rows="5" cols="60" name="description" id="description"></textarea>
+          </div>
+      <div> <br />
+        <label for="emotion">Emotions Being Felt: </label> <br>
+        <textarea rows="5" cols="60" name="emotion" id="emotion"></textarea>
+      </div>
+
+      <div>
+        <label for="eintensity">Intensity of Emotions: </label>
+        <input
+          type="number"
+          id="eintensity"
+          name="eintensity"
+          min="0"
+          max="10"
+        />
+      </div><br />
+      <div>
+        <label for="thought">Thoughts being experienced: </label> <br />
+        <textarea rows="5" cols="60" name="thought" id="thought"></textarea>
+      </div>
+      <div>
+        <label for="tintensity">Intensity of Thoughts: </label>
+        <input
+          type="number"
+          id="tintensity"
+          name="tintensity"
+          min="0"
+          max="10"
+        />
+      </div> <br />
+      <div>
+        <label for="skill">Skill Used: </label> <br />
+        <textarea rows="5" cols="60" name="skill" id="skill"></textarea>
+      </div>
+      
+    <div>
+        <label for="psintensity">Intensity After Skill Use: </label>
+        <input
+            type="number"
+            id="psintensity"
+            name="psintensity"
+            min="0"
+            max="10"
+        />
+        </div> <br />
+
+    <div>
+        <button type="button" id="create" class="buttons">Create</button>
+        <input type="reset" value="Reset" class="buttons">
+    </div>
+        </form>
+        <br />
+        <center>
+        <div>
+          <img
+            src="images/feelings-wheel.png"
+            alt="multicolored wheel with feeling words on it"
+            width="1200"
+            height="1200"
+          />
+        </div>
+        <p>
+            Feelings Wheel Image from
+            <a href="https://feelingswheel.com/">feelingswheel.com</a>
+          </p>
+        </center>
+    </div>
+    <script type="text/javascript" src="main.js" />
+  </body>
+</html>
